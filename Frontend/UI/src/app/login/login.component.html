@@ -1,0 +1,26 @@
+<!-- login.component.html -->
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <!-- Sign Up Form -->
+    <div class="signup">
+        <form (ngSubmit)="onSignUpSubmit()">
+            <label for="chk" aria-hidden="true">CareerConnect</label>
+            <input type="text" [(ngModel)]="signupData.username" name="txt" placeholder="User name" required />
+            <input type="email" [(ngModel)]="signupData.email" name="email" placeholder="Email" required />
+            <input type="number" [(ngModel)]="signupData.phoneNumber" name="broj" placeholder="Phone Number" required />
+            <input type="password" [(ngModel)]="signupData.password" name="pswd" placeholder="Password" required />
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login">
+        <form (ngSubmit)="onLoginSubmit()">
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="email" [(ngModel)]="loginData.email" name="email" placeholder="Email" required />
+            <input type="password" [(ngModel)]="loginData.password" name="pswd" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
